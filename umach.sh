@@ -27,7 +27,7 @@ is_mac() {
 restart() {
     echo "Do you want to restart NetworkManager right now? (Y/n): "
     read answer
-    if [[ ${answer^^} = "Y" ]]; then 
+    if [[ ${answer^^} -eq "Y" ]]; then 
         service network-manager restart
     fi
 }
